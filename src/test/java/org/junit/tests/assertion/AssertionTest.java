@@ -56,6 +56,7 @@ public class AssertionTest {
     
     @Test
     public void assertGreaterThanTest() {
+
         String x = "Claudio";
         String y = "Rota";
         Comparator<String> comparator = new Comparator<String>() {
@@ -64,6 +65,23 @@ public class AssertionTest {
             }
         };
         assertGreaterThan(y, x, comparator);
+    }
+        
+        @Test
+        public void assertGreaterThanTestInt() {
+        int x = 4;
+        int y = 3;
+        Comparator<Integer> comparator = new Comparator<Integer>() {
+            public int compare(Integer o1, Integer o2) {
+                if(o1 > o2)
+                    return 1;
+                else if(o1 < o2)
+                    return -1;
+                else
+                    return 0;
+            }
+        };
+        assertGreaterThan(x, y, comparator);
     }
 
     @Test
