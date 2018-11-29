@@ -52,6 +52,10 @@ public class Assert {
     public static void assertTrue(boolean condition) {
         assertTrue(null, condition);
     }
+    
+    public static void assertGreaterThan(int o1, int o2, java.util.Comparator<Integer> comparator) {
+        assertTrue(comparator.compare(o1, 02) > 0);
+    }
 
     /**
      * Asserts that a condition is false. If it isn't it throws an
